@@ -47,7 +47,7 @@ public class HarmonyServiceTest {
     StepVerifier
         .withVirtualTime(() -> service.queryHarmony(request))
         .expectSubscription()
-        .thenAwait(Duration.ofMillis(150))
+        .thenAwait(Duration.ofMillis(1000))
         .consumeNextWith(response -> {
           assertThat(response.getNames().size(), is(2));
           assertThat(response.getNames().get(0).getValue(), is("JOHN SMITH"));

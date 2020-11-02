@@ -84,7 +84,7 @@ public class DataQualityServiceTest {
           assertThat(address.getPostcode(), is("4000"));
           assertThat(address.getCountry(), is("AUSTRALIA"));
 
-          assertThat(r.getEmailAddesses().size(), is(2));
+          assertThat(r.getEmailAddresses().size(), is(2));
           assertThat(r.findEmailAddress("Work").getEmailAddress(), is("TEST1@TEST.COM"));
           assertThat(r.findEmailAddress("Home").getEmailAddress(), is("TEST2@TEST.COM"));
 

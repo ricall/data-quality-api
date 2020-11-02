@@ -45,7 +45,7 @@ public class DataQualityResponse {
   @Builder.Default
   private List<AddressWithQuality> addresses = new ArrayList<>();
   @Builder.Default
-  private List<EmailAddressWithQuality> emailAddesses = new ArrayList<>();
+  private List<EmailAddressWithQuality> emailAddresses = new ArrayList<>();
   @Builder.Default
   private List<PhoneNumberWithQuality> phoneNumbers = new ArrayList<>();
 
@@ -72,11 +72,11 @@ public class DataQualityResponse {
   }
 
   public void addEmailAddress(EmailAddressWithQuality emailAddress) {
-    emailAddesses.add(emailAddress);
+    emailAddresses.add(emailAddress);
   }
 
   public EmailAddressWithQuality findEmailAddress(String type) {
-    return emailAddesses.stream()
+    return emailAddresses.stream()
         .filter(e -> type.equals(e.getType()))
         .findFirst()
         .orElse(null);
